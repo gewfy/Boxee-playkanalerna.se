@@ -1,0 +1,15 @@
+<app>
+  <id>se.playkanalerna</id>
+  <name>Playkanalerna</name>
+  <version>1.0</version>
+  <description>Watch TV Shows from Play kanalerna</description>
+  <!-- <thumb>http://boxee.ikbenjaap.com/se.svtplay.png</thumb> -->
+  <media>video</media>
+  <copyright></copyright>
+  <email></email>
+  <type>skin</type>
+  <startWindow>app</startWindow>
+  <platform>all</platform>
+  <minversion>0.9.20</minversion>
+  <test-app>true</test-app>
+</app>

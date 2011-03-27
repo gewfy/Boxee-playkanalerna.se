@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<window type="window" id="14002">
+	<onload lang="python"><![CDATA[
+from libs import controller
+]]></onload>
+	<defaultcontrol always="true">51</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Common_Background</include>
+		<include>Common_Status</include>
+		<control type="image">
+			<visible/>
+			<posx>62</posx>
+			<posy>62</posy>
+			<width>265</width>
+			<height>36</height>
+			<texture>logo.png</texture>
+		</control>
+		<control type="label" id="30">
+			<posx>62</posx>
+			<posy>82</posy>
+			<width>1100</width>
+			<height>56</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>font20b</font>
+			<textcolor>white</textcolor>
+		</control>
+		<control type="group" id="1200">
+			<control type="panel" id="51">
+				<include>BrowseListAnimation</include>
+				<preloaditems>2</preloaditems>
+				<posx>26</posx>
+				<posy>136</posy>
+				<width>1220</width>
+				<height>584</height>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<scrolltime>400</scrolltime>
+				<pagecontrol>60</pagecontrol>
+				<orientation>vertical</orientation>
+				<offsetx>4</offsetx>
+				<offsety>4</offsety>
+				<itemlayout width="1188" height="140">
+					<control type="image" platformClass="pc">
+						<posx>28</posx>
+						<posy>0</posy>
+						<width>168</width>
+						<height>95</height>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<animation type="Conditional" condition="Control.HasFocus(51)">
+							<effect type="fade" start="100" end="20" time="1"/>
+						</animation>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<posx>200</posx>
+						<posy>18</posy>
+						<width>400</width>
+						<height>24</height>
+						<font>font22b</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>grey</textcolor>
+					</control>
+					<control type="label">
+						<posx>200</posx>
+						<posy>44</posy>
+						<width>400</width>
+						<height>24</height>
+						<font>font22</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Duration]</label>
+						<textcolor>grey</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout width="1188" height="140">
+					<control type="image" platformClass="pc">
+						<posx>28</posx>
+						<posy>0</posy>
+						<width>168</width>
+						<height>95</height>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>-16</posy>
+						<width>1220</width>
+						<height>128</height>
+						<texture border="30">line_view_on.png</texture>
+					</control>
+					<control type="group">
+						<control type="label">
+							<posx>200</posx>
+							<posy>18</posy>
+							<width>400</width>
+							<height>24</height>
+							<font>title24b</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>white</textcolor>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<posx>200</posx>
+							<posy>44</posy>
+							<width>400</width>
+							<height>24</height>
+							<font>font22</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.property(description)]</label>
+							<textcolor>grey</textcolor>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</controls>
+</window>
